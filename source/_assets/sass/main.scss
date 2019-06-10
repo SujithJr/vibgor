@@ -1,0 +1,202 @@
+@tailwind base;
+@tailwind components;
+
+
+@import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great|Merienda:400,700|Courgette&display=swap');
+// @import url('https://fonts.googleapis.com/css?family=Comfortaa:500,700|Courgette&display=swap');
+// |Londrina+Outline|PT+Serif+Caption|Philosopher|Rye|Skranji
+
+
+body {
+    // height: 1500px;
+    @apply bg-black;
+}
+
+.c-wrapper {
+    -webkit-perspective: 1px;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.s-header {
+    z-index: 10000;
+    @apply py-4 sticky inset-x-0 top-0 w-full bg-black-d;
+}
+
+.c-logo {
+    width: 170px;
+    &__img {
+        @apply block w-full;
+    }
+}
+
+.c-lists {
+    @apply list-none flex items-center justify-end;
+    &__list {
+        @apply mx-4;
+        &:first-child {
+            @apply ml-0;
+        }
+        &:last-child {
+            @apply mr-0;
+        }
+    }
+    &__link {
+        @apply text-white opacity-75 font-menu;
+    }
+}
+
+.s-banner {
+    // background-image: url('./../../assets/images/banner.jpg');
+    // height: 100vh;
+    // transform: translateY(0);
+    z-index: -1;
+    // opacity: 1;
+    // relative
+    // top: 166px;
+    transform: translateZ(-1px) scale(2);
+    @apply bg-cover bg-no-repeat bg-center overflow-x-hidden top-0 relative h-screen;
+    &::before, &::after {
+        content: '';
+        height: 100px;
+        background-image: linear-gradient(black, transparent);
+        @apply absolute top-0 left-0 w-full;
+    }
+    &::after {
+        // background-image: linear-gradient(transparent, black);
+        background-image: radial-gradient(transparent, black);
+        top: 0;
+        left: 0;
+        height: 100%;
+        // @apply bottom-0 left-0 top-auto;
+    }
+}
+
+.c-banner {
+    // height: calc(100vh - 166px);
+    background: linear-gradient(to left, #000000, rgba(0,0,0,0.75));
+    @apply relative flex items-center h-screen justify-center;
+    &::before {
+        content: "";
+        left: -200px;
+        width: 200px;
+        background: linear-gradient(to left, rgba(0,0,0,0.75), transparent);
+        @apply absolute top-0 bottom-0 h-full;
+    }
+    &::after {
+        content: "";
+        right: -100vw;
+        background: linear-gradient(to right, #000000, rgba(0,0,0,0.9));
+        @apply absolute top-0 w-screen h-full;
+    }
+    &__content {
+        @apply pl-6 relative z-10;
+    }
+}
+
+.c-title {
+    @apply text-gray-400 text-5xl relative;
+}
+
+.c-title-main {
+    border-bottom: 5px solid #4fc5c5;
+    border-radius: 12px;
+    @apply text-5xl text-white opacity-75 font-title inline-block pb-1;
+}
+
+.c-stripe {
+    width: 4px;
+    // height: 80%;
+    background-image: linear-gradient(to bottom, #51c3c3 , #89d46d, #c2d521, #d21684, #c5192f, #fdc70b, #b7389f, #0d84c8, #3db6c1);
+}
+
+.js-stripe {
+    @apply relative opacity-0;
+    transition: 0.6s all;
+    // top: 10px;
+    height: 0%;
+    &.opacity-low {
+        @apply opacity-100;
+        // top: 0;
+        height: 80%;
+    }
+}
+
+.hide {
+    opacity: 0;
+}
+
+.visible {
+    opacity: 1;
+}
+
+.js-banner-items {
+    @apply relative opacity-0;
+    transition: 0.6s all;
+    left: 100px;
+    &.active {
+        @apply opacity-100;
+        transition: 0.6s all;
+        left: 0;
+    }
+}
+
+// About Us
+
+.s-about {
+    @apply bg-black py-20 bg-black-d;
+    // background-image: url('./../../images/about.jpg');
+    // background-position: 0px -142%;
+    // @apply bg-cover bg-no-repeat bg-fixed w-full relative;
+    // &::before {
+    //     content: ' ';
+    //     background: rgba(0,0,0,0.92);
+    //     @apply absolute top-0 left-0 w-full h-full;
+    // }
+}
+
+.c-about-title {
+    // background-image: url('./../../images/about.jpg');
+    // @apply bg-cover bg-center bg-no-repeat w-full;
+}
+
+.c-about {
+    @apply relative;
+    &__title {
+        @apply font-spl3 text-theme text-3xl mb-4;
+    }
+    &__para {
+        @apply text-white opacity-50 font-title leading-loose;
+    }
+}
+
+.s-printing {
+    @apply bg-black-d;
+}
+
+.c-print-banner {
+    width: 500px;
+    // box-shadow: 2px 5px 10px 0px #000;
+    box-shadow: 0px 15px 25px 5px #000;
+    @apply z-20 relative;
+    img {
+        object-fit: cover;
+        @apply block w-full h-full;
+    }
+}
+
+.c-print {
+    @apply pl-32;
+    &__para {
+        margin-top: -100px;
+        @apply bg-black text-white opacity-75 leading-loose font-title px-16 pb-8 pt-32 relative z-10;
+    }
+}
+
+
+
+@tailwind utilities;
