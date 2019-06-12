@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="https://unpkg.com/flexboxgrid2@7.2.1/flexboxgrid2.css">
         <script src="{{ $page->baseUrl }}{{ mix('js/main.js', 'assets/build') }}"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+        <script src="https://kit.fontawesome.com/6f3f390ba1.js"></script>
     </head>
     <body>
         @yield('body')
