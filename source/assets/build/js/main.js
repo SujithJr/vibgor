@@ -13096,11 +13096,22 @@ $(document).ready(function () {
     offset: 100
   });
   var bannerHeight = $('.js-banner-content').height();
-  $('.js-stripe').height(bannerHeight + 40); // $(window).scroll(function() {
-  //     var scrollAbove = $(window).scrollTop();
-  //     moveBanner(scrollAbove);
-  // });
-  // $('.l-main').on('mousewheel', function(e) {
+  $('.js-stripe').height(bannerHeight + 40);
+  $(window).scroll(function () {
+    var scrollAbove = $(window).scrollTop();
+
+    if (scrollAbove > 10) {
+      $('.s-header').css({
+        'background': '#000',
+        'box-shadow': '0px 0px 15px 0px #000'
+      });
+    } else {
+      $('.s-header').css({
+        'background': '#111',
+        'box-shadow': 'none'
+      });
+    }
+  }); // $('.l-main').on('mousewheel', function(e) {
   //     e.preventDefault();
   // });
 });

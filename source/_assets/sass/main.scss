@@ -9,11 +9,8 @@
 
 
 body {
-    // height: 1500px;
     @apply bg-black;
     scroll-behavior: smooth;
-    overflow-x: hidden;
-    // overflow-y: scroll;
 }
 
 ::-moz-selection {
@@ -23,12 +20,16 @@ body {
     background: #4fc5c5;
 }
 
+.page-anchor {
+    margin-top: -108px;
+    height: 108px;
+    @apply block invisible;
+}
+
 .c-wrapper {
     perspective: 1px;
     transform-style: preserve-3d;
-    height: 100vh;
-    overflow-x: hidden;
-    overflow-y: scroll;
+    @apply overflow-x-hidden overflow-y-scroll h-screen;
 }
 
 .c-banner-wrap {
@@ -39,6 +40,7 @@ body {
 
 .s-header {
     z-index: 10000;
+    transition: 0.6s all;
     @apply py-4 sticky inset-x-0 top-0 w-full bg-black-d;
 }
 
@@ -63,9 +65,8 @@ body {
         }
     }
     &__img-text {
-        display: block;
         width: 140px;
-        margin-left: 8px;
+        @apply block ml-2;
     }
 }
 
@@ -79,21 +80,39 @@ body {
         &:last-child {
             @apply mr-0;
         }
+        &.selected {
+            .c-lists__link {
+                transition: 0.4s all;
+                @apply text-theme;
+                &::after {
+                    @apply w-full;
+                }
+            }
+        }
     }
     &__link {
-        @apply text-white opacity-75 font-menu;
+        transition: 0.6s all;
+        @apply text-white opacity-75 font-menu relative inline-block;
+        &::after {
+            content: ' ';
+            height: 3px;
+            width: 0%;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: 0.4s all;
+            @apply absolute bg-theme rounded-full;
+        }
+        &:hover {
+            &::after {
+                transition: 0.4s all;
+                @apply w-full;
+            }
+        }
     }
 }
 
 .s-banner {
-    // background-image: url('./../../assets/images/banner.jpg');
-    // height: 100vh;
-    // transform: translateY(0);
-    // z-index: -1;
-    // opacity: 1;
-    // relative
-    // top: 166px;
-    // transform: translateZ(-1px) scale(2);
     @apply bg-cover bg-no-repeat bg-center overflow-x-hidden top-0;
     &::before, &::after {
         content: '';
@@ -102,17 +121,12 @@ body {
         @apply absolute top-0 left-0 w-full;
     }
     &::after {
-        // background-image: linear-gradient(transparent, black);
         background-image: radial-gradient(transparent, black);
-        top: 0;
-        left: 0;
-        height: 100%;
-        // @apply bottom-0 left-0 top-auto;
+        @apply h-full;
     }
 }
 
 .c-banner {
-    // height: calc(100vh - 166px);
     background: linear-gradient(to left, #000000, rgba(0,0,0,0.75));
     @apply relative flex items-center h-screen justify-center;
     &::before {
@@ -138,8 +152,6 @@ body {
 }
 
 .c-title-main {
-    // border-bottom: 5px solid #4fc5c5;
-    // border-radius: 12px;
     @apply text-4xl text-white opacity-75 font-title inline-block pb-1 relative;
     &::after {
         content: ' ';
@@ -151,22 +163,22 @@ body {
         transition: 0.6s all;
         @apply absolute bg-theme rounded-full;
     }
+    &--banner {
+        @apply text-5xl;
+    }
 }
 
 .c-stripe {
     width: 4px;
-    // height: 80%;
     background-image: linear-gradient(to bottom, #51c3c3 , #89d46d, #c2d521, #d21684, #c5192f, #fdc70b, #b7389f, #0d84c8, #3db6c1);
 }
 
 .js-stripe {
     @apply relative opacity-0;
     transition: 0.6s all;
-    // top: 10px;
     height: 0%;
     &.opacity-low {
         @apply opacity-100;
-        // top: 0;
         height: 80%;
     }
 }
@@ -184,28 +196,22 @@ body {
     transition: 0.6s all;
     left: 100px;
     &.active {
-        @apply opacity-100;
         transition: 0.6s all;
-        left: 0;
+        @apply opacity-100 left-0;
     }
 }
 
 .l-main {
     @apply relative block z-10;
+    &--space-top {
+        margin-top: 107px;
+    }
 }
 
 // About Us
 
 .s-about {
     @apply bg-black py-20 bg-black-d;
-    // background-image: url('./../../images/about.jpg');
-    // background-position: 0px -142%;
-    // @apply bg-cover bg-no-repeat bg-fixed w-full relative;
-    // &::before {
-    //     content: ' ';
-    //     background: rgba(0,0,0,0.92);
-    //     @apply absolute top-0 left-0 w-full h-full;
-    // }
 }
 
 .c-about-title {
@@ -227,6 +233,12 @@ body {
                 @apply w-full;
             }
         }
+    }
+    &--main {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @apply absolute text-center z-20;
     }
 }
 
@@ -260,17 +272,10 @@ body {
 .c-process-banner {
     width: 750px;
     height: 500px;
-    // box-shadow: 2px 5px 10px 0px #000;
-    // box-shadow: 0px 15px 25px 5px #000;
     @apply z-20 relative;
-    // img {
-    //     object-fit: cover;
-    //     @apply block w-full h-full;
-    // }
 }
 
 .c-process {
-    // height: 350px;
     margin-top: -130px;
     @apply ml-32 relative;
     &__para {
@@ -279,8 +284,8 @@ body {
         @apply bg-black text-white opacity-0 invisible leading-loose px-16 pb-16 absolute top-0 left-0 z-10;
         &.is-shown {
             visibility: visible;
-            opacity: 0.75;
             transition: 0.4s all;
+            @apply opacity-75;
         }
     }
     &__cont {
@@ -351,6 +356,113 @@ body {
     transition: 0.4s all;
 }
 
+// Printing Page
+.s-printing {
+    // background-image: url('../../assets/images/print-banner-1.jpg');
+    // mb-16
+    @apply bg-black-d py-16 pb-24 relative;
+    &::after {
+        content: ' ';
+        height: 2rem;
+        background-image: linear-gradient(to left, rgba(0,0,0,1), #222);
+        @apply absolute left-0 bottom-0 w-full;
+    }
+    &:first-child {
+        @apply pt-0;
+    }
+    &:last-child {
+        @apply pb-16;
+        &::after {
+            content: none;
+        }
+    }
+}
+
+.c-banner-printing {
+    height: calc(100vh - 107px);
+    @apply relative overflow-hidden;
+    &::before {
+        content: ' ';
+        background: rgba(0,0,0,0.5);
+        @apply absolute top-0 left-0 w-full h-full z-10;
+    }
+    img {
+        transition: 0.4s all;
+        object-fit: cover;
+        object-position: 0 -120px;
+        @apply w-full h-full block;
+    }
+    &:hover {
+        img {
+            transition: 0.4s all;
+            transform: scale(1.1);
+        }
+        .c-title-main--banner {
+            &::after {
+                @apply w-full;
+            }
+        }
+    }
+}
+
+.c-printing {
+    // @apply w-2/3 mr-auto;
+    // @apply flex items-start;
+    // border-radius: 20px;
+    // @apply bg-center bg-fixed bg-no-repeat bg-cover w-full relative;
+    // &::before {
+    //     content: ' ';
+    //     background: rgba(0,0,0,0.65);
+    //     @apply absolute top-0 left-0 w-full h-full;
+    // }
+    &__img {
+        height: 400px;
+        @apply w-4/5 p-6 mx-auto;
+    }
+    &__banner {
+        object-fit: cover;
+        border-radius: 20px;
+        @apply w-full h-full block;
+    }
+}
+
+.c-printing-content {
+    // padding-top: 6rem;
+    margin-top: -4rem;
+    box-shadow: 0px 4px 15px 0px #000;
+    @apply bg-black px-12 py-16 relative;
+    &__para {
+        @apply text-white opacity-50 pt-6 font-body leading-loose text-center;
+    }
+    &__process {
+        @apply py-16;
+        &:nth-child(odd) {
+            .row {
+                @apply flex-row-reverse;
+                .c-process-cont {
+                    background-image: linear-gradient(to left, rgba(0,0,0,1), #222);
+                }
+            }
+        }
+    }
+}
+
+.c-process-img {
+    height: 300px;
+    img {
+        object-fit: cover;
+        @apply block w-full h-full;
+    }
+}
+
+.c-process-cont {
+    background-image: linear-gradient(to right, rgba(0,0,0,1), #222);
+    @apply bg-black-d p-8 h-full;
+    p {
+        @apply text-white opacity-75 font-body leading-loose;
+    }
+}
+
 // Footer 
 
 .s-footer {
@@ -380,7 +492,6 @@ body {
             @apply absolute bg-theme;
         }
         &:hover {
-            // @apply border-theme border-b-2;
             transition: 0.6s all;
             &::after {
                 @apply w-full;
