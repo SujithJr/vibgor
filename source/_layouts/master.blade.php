@@ -12,6 +12,14 @@
         <script src="https://kit.fontawesome.com/6f3f390ba1.js"></script>
     </head>
     <body>
-        @yield('body')
+        @if($page->getFilename() != 'index')
+            @include('_partials.header')
+        @endif
+
+            @yield('body')
+            
+        @if($page->getFilename() != 'index')
+            @include('_partials.footer')
+        @endif
     </body>
 </html>

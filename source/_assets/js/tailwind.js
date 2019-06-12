@@ -7,6 +7,7 @@ module.exports = {
         spl3: ['Fredericka the Great', 'cursive'],
         title: ['Merienda', 'cursive'],
         menu: ['Courgette', 'cursive'],
+        body: ['B612', 'sans-serif'],
         // spl4: ['Londrina Outline', 'cursive'],
         // spl5: ['Rye', 'cursive'],
         // spl6: ['Skranji', 'cursive']
