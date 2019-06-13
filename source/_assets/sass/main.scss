@@ -173,13 +173,56 @@ body {
     background-image: linear-gradient(to bottom, #51c3c3 , #89d46d, #c2d521, #d21684, #c5192f, #fdc70b, #b7389f, #0d84c8, #3db6c1);
 }
 
+// Viewportchecker animation classes
 .js-stripe {
     @apply relative opacity-0;
     transition: 0.6s all;
     height: 0%;
     &.opacity-low {
+        transition: 0.6s all;
         @apply opacity-100;
         height: 80%;
+    }
+}
+
+.js-slideUp {
+    @apply relative opacity-0;
+    transition: 0.6s all;
+    top: 30px;
+    &.show {
+        transition: 0.6s all;
+        @apply opacity-75;
+        top: 0;
+    }
+}
+
+.js-para {
+    @apply relative opacity-0;
+    transition: 0.8s all;
+    bottom: 30px;
+    &.show {
+        transition: 0.8s all;
+        @apply opacity-50 bottom-0;
+    }
+}
+
+.js-slideImg {
+    transition: 0.8s all;
+    top: -10px;
+    @apply relative z-10 opacity-0;
+    &.show {
+        transition: 0.8s all;
+        @apply top-0 opacity-100;
+    }
+}
+
+.js-slideCont {
+    left: -30px;
+    transition: 0.86 all;
+    @apply opacity-0 relative;
+    &.show {
+        transition: 0.6s all;
+        @apply left-0 opacity-75;
     }
 }
 
@@ -295,8 +338,9 @@ body {
         line-height: 1;
         text-shadow: 2px 1px 2px #000;
         border-radius: 5px 5px 15px 15px;
-        box-shadow: 0px 2px #555;
-        background: #222;
+        box-shadow: 0px 2px #ee1a92;
+        // background: #222;
+        background: linear-gradient(to right, #111, transparent);
         @apply text-white text-sm font-title px-8 py-3 inline-block mt-4;
         span {
             @apply text-white ml-1;
@@ -432,7 +476,7 @@ body {
     box-shadow: 0px 4px 15px 0px #000;
     @apply bg-black px-12 py-16 relative;
     &__para {
-        @apply text-white opacity-50 pt-6 font-body leading-loose text-center;
+        @apply text-white pt-6 font-body leading-loose text-center;
     }
     &__process {
         @apply py-16;
@@ -441,6 +485,15 @@ body {
                 @apply flex-row-reverse;
                 .c-process-cont {
                     background-image: linear-gradient(to left, rgba(0,0,0,1), #222);
+                }
+                .js-slideCont {
+                    right: -30px;
+                    transition: 0.86 all;
+                    @apply left-auto opacity-0 relative;
+                    &.show {
+                        transition: 0.6s all;
+                        @apply left-auto right-0 opacity-75;
+                    }
                 }
             }
         }
@@ -459,7 +512,7 @@ body {
     background-image: linear-gradient(to right, rgba(0,0,0,1), #222);
     @apply bg-black-d p-8 h-full;
     p {
-        @apply text-white opacity-75 font-body leading-loose;
+        @apply text-white font-body leading-loose;
     }
 }
 

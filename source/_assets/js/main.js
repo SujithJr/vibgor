@@ -83,6 +83,26 @@ $(document).ready(function () {
         offset: 100
     });
 
+    $('.js-slideUp').viewportChecker({
+        classToAdd: 'show',
+        offset: 100
+    });
+
+    $('.js-para').viewportChecker({
+        classToAdd: 'show',
+        offset: 100
+    });
+
+    $('.js-slideImg').viewportChecker({
+        classToAdd: 'show',
+        offset: 100
+    });
+
+    $('.js-slideCont').viewportChecker({
+        classToAdd: 'show',
+        offset: 100
+    });
+
     var bannerHeight = $('.js-banner-content').height();
     $('.js-stripe').height(bannerHeight + 40);
 

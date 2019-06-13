@@ -3,7 +3,6 @@
 @section('body')
 
 <div class="c-wrapper">
-    <!-- @include('_partials.header') -->
     <div class="c-banner-wrap">
         <section class="s-banner js-banner" style="background-image: url({{ $page->baseUrl }}/assets/images/banner.jpg)">
             <div class="container">
@@ -113,7 +112,7 @@
                         <div class="c-process-wrapper">
                             <div class="c-process-banner js-process-press">
                                 <div class="c-img-wrap is-shown">
-                                    <img src="{{ $page->baseUrl }}/assets/images/pre-press-1.jpg" alt="">
+                                    <img src="{{ $page->baseUrl }}/assets/images/pre-press-2.jpg" alt="">
                                 </div>
                                 <div class="c-img-wrap">
                                     <img src="{{ $page->baseUrl }}/assets/images/img-retouch.jpg" alt="">
@@ -160,11 +159,11 @@
                             <div class="c-process js-process-design-cont">
                                 <div class="c-process__para is-shown">
                                     <p class="c-process__cont">Printing We are pioneering company married to creativeness, uniqueness, and crispness to cater the digital experience necessary for the success of any business. Modern-day technology and dynamic graphic designs build strong brands with lasting identity. According to us enticing graphical design and an innovative outcome can only create solid foundation required for a noteworthy brand. We are a passionate team of artisans providing outstanding solutions that not only increases customer retention rate, but also increases customer recommendation rate too.</p>
-                                    <a href="{{ $page->baseUrl }}/design" class="c-process__link">Explore <span class="fas fa-box-open"></span></a>
+                                    <a href="{{ $page->baseUrl }}/design/#design-logo" class="c-process__link">Explore <span class="fas fa-box-open"></span></a>
                                 </div>
                                 <div class="c-process__para">
                                     <p class="c-process__cont">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita placeat reiciendis rem autem nemo enim. Magnam, minus aperiam. Vitae a amet illum nostrum culpa, tempora sequi recusandae! Facilis, sint amet.</p>
-                                    <a href="{{ $page->baseUrl }}/design" class="c-process__link">Explore <span class="fas fa-box-open"></span></a>
+                                    <a href="{{ $page->baseUrl }}/design/#design-logo" class="c-process__link">Explore <span class="fas fa-box-open"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -186,11 +185,11 @@
                             <div class="c-process js-process-pkg-cont">
                                 <div class="c-process__para is-shown">
                                     <p class="c-process__cont">Printing We are pioneering company married to creativeness, uniqueness, and crispness to cater the digital experience necessary for the success of any business. Modern-day technology and dynamic graphic designs build strong brands with lasting identity. According to us enticing graphical design and an innovative outcome can only create solid foundation required for a noteworthy brand. We are a passionate team of artisans providing outstanding solutions that not only increases customer retention rate, but also increases customer recommendation rate too.</p>
-                                    <a href="{{ $page->baseUrl }}/packaging" class="c-process__link">Explore <span class="fas fa-box-open"></span></a>
+                                    <a href="{{ $page->baseUrl }}/packaging/#packaging" class="c-process__link">Explore <span class="fas fa-box-open"></span></a>
                                 </div>
                                 <div class="c-process__para">
                                     <p class="c-process__cont">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita placeat reiciendis rem autem nemo enim. Magnam, minus aperiam. Vitae a amet illum nostrum culpa, tempora sequi recusandae! Facilis, sint amet.</p>
-                                    <a href="{{ $page->baseUrl }}/packaging" class="c-process__link">Explore <span class="fas fa-box-open"></span></a>
+                                    <a href="{{ $page->baseUrl }}/packaging/#gift-articles" class="c-process__link">Explore <span class="fas fa-box-open"></span></a>
                                 </div>
                             </div>
                         </div>

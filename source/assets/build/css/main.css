@@ -877,8 +877,62 @@ body {
 }
 
 .js-stripe.opacity-low {
+  transition: 0.6s all;
   opacity: 1;
   height: 80%;
+}
+
+.js-slideUp {
+  position: relative;
+  opacity: 0;
+  transition: 0.6s all;
+  top: 30px;
+}
+
+.js-slideUp.show {
+  transition: 0.6s all;
+  opacity: 0.75;
+  top: 0;
+}
+
+.js-para {
+  position: relative;
+  opacity: 0;
+  transition: 0.8s all;
+  bottom: 30px;
+}
+
+.js-para.show {
+  transition: 0.8s all;
+  opacity: 0.5;
+  bottom: 0;
+}
+
+.js-slideImg {
+  transition: 0.8s all;
+  top: -10px;
+  position: relative;
+  z-index: 10;
+  opacity: 0;
+}
+
+.js-slideImg.show {
+  transition: 0.8s all;
+  top: 0;
+  opacity: 1;
+}
+
+.js-slideCont {
+  left: -30px;
+  transition: 0.86 all;
+  opacity: 0;
+  position: relative;
+}
+
+.js-slideCont.show {
+  transition: 0.6s all;
+  left: 0;
+  opacity: 0.75;
 }
 
 .hide {
@@ -1046,8 +1100,8 @@ body {
   line-height: 1;
   text-shadow: 2px 1px 2px #000;
   border-radius: 5px 5px 15px 15px;
-  box-shadow: 0px 2px #555;
-  background: #222;
+  box-shadow: 0px 2px #ee1a92;
+  background: linear-gradient(to right, #111, transparent);
   color: #fff;
   font-size: 0.875rem;
   font-family: Merienda, cursive;
@@ -1227,7 +1281,6 @@ body {
 
 .c-printing-content__para {
   color: #fff;
-  opacity: 0.5;
   padding-top: 1.5rem;
   font-family: B612, sans-serif;
   line-height: 2;
@@ -1245,6 +1298,21 @@ body {
 
 .c-printing-content__process:nth-child(odd) .row .c-process-cont {
   background-image: linear-gradient(to left, black, #222);
+}
+
+.c-printing-content__process:nth-child(odd) .row .js-slideCont {
+  right: -30px;
+  transition: 0.86 all;
+  left: auto;
+  opacity: 0;
+  position: relative;
+}
+
+.c-printing-content__process:nth-child(odd) .row .js-slideCont.show {
+  transition: 0.6s all;
+  left: auto;
+  right: 0;
+  opacity: 0.75;
 }
 
 .c-process-img {
@@ -1268,7 +1336,6 @@ body {
 
 .c-process-cont p {
   color: #fff;
-  opacity: 0.75;
   font-family: B612, sans-serif;
   line-height: 2;
 }
