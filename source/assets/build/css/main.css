@@ -665,6 +665,138 @@ body {
   position: relative;
 }
 
+.c-arrowdown {
+  right: 20px;
+  bottom: 20px;
+  width: 100px;
+  height: 60px;
+  -webkit-animation-name: example;
+          animation-name: example;
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  z-index: 10;
+  position: absolute;
+  text-align: center;
+}
+
+.c-arrowdown a {
+  font-size: 1.5rem;
+  position: relative;
+  top: 0;
+  color: #fff;
+  display: block;
+  outline: 0;
+  height: 100%;
+  top: 0;
+  text-decoration: none;
+}
+
+@-webkit-keyframes example {
+  0% {
+    bottom: 50px;
+    opacity: 0.1;
+  }
+
+  10% {
+    bottom: 45px;
+    opacity: 0.2;
+  }
+
+  20% {
+    bottom: 40px;
+    opacity: 0.3;
+  }
+
+  30% {
+    bottom: 35px;
+    opacity: 1;
+  }
+
+  40% {
+    bottom: 30px;
+    opacity: 1;
+  }
+
+  50% {
+    bottom: 25px;
+    opacity: 1;
+  }
+
+  60% {
+    bottom: 20px;
+    opacity: 1;
+  }
+
+  70% {
+    bottom: 15px;
+    opacity: 0.3;
+  }
+
+  80% {
+    bottom: 10px;
+    opacity: 0.2;
+  }
+
+  100% {
+    bottom: 10px;
+    opacity: 0.1;
+  }
+}
+
+@keyframes example {
+  0% {
+    bottom: 50px;
+    opacity: 0.1;
+  }
+
+  10% {
+    bottom: 45px;
+    opacity: 0.2;
+  }
+
+  20% {
+    bottom: 40px;
+    opacity: 0.3;
+  }
+
+  30% {
+    bottom: 35px;
+    opacity: 1;
+  }
+
+  40% {
+    bottom: 30px;
+    opacity: 1;
+  }
+
+  50% {
+    bottom: 25px;
+    opacity: 1;
+  }
+
+  60% {
+    bottom: 20px;
+    opacity: 1;
+  }
+
+  70% {
+    bottom: 15px;
+    opacity: 0.3;
+  }
+
+  80% {
+    bottom: 10px;
+    opacity: 0.2;
+  }
+
+  100% {
+    bottom: 10px;
+    opacity: 0.1;
+  }
+}
+
 .s-header {
   z-index: 10000;
   transition: 0.6s all;
@@ -785,6 +917,7 @@ body {
 }
 
 .s-banner {
+  position: relative;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1067,8 +1200,8 @@ body {
 }
 
 .c-process-banner {
-  width: 750px;
-  height: 500px;
+  width: 600px;
+  height: 400px;
   z-index: 20;
   position: relative;
 }
@@ -1089,7 +1222,7 @@ body {
   line-height: 2;
   padding-left: 4rem;
   padding-right: 4rem;
-  padding-bottom: 4rem;
+  padding-bottom: 3rem;
   position: absolute;
   top: 0;
   left: 0;
