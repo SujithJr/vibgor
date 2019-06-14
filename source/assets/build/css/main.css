@@ -745,8 +745,7 @@ body {
 
 .c-lists__link {
   transition: 0.6s all;
-  color: #fff;
-  opacity: 0.75;
+  color: rgba(255, 255, 255, 0.75);
   font-family: Courgette, cursive;
   position: relative;
   display: inline-block;
@@ -769,6 +768,20 @@ body {
 .c-lists__link:hover::after {
   transition: 0.4s all;
   width: 100%;
+}
+
+.c-lists__link-spl {
+  text-shadow: 1px 1px 2px #000;
+  color: rgba(255, 255, 255, 0.9);
+  background-color: #4fc5c5;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  border-radius: 0.125rem;
+  font-size: 1rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  display: inline-block;
+  font-family: Courgette, cursive;
 }
 
 .s-banner {
@@ -831,8 +844,8 @@ body {
 }
 
 .c-title {
+  font-size: 3.25rem;
   color: #cbd5e0;
-  font-size: 3rem;
   position: relative;
 }
 
@@ -898,14 +911,12 @@ body {
 .js-para {
   position: relative;
   opacity: 0;
-  transition: 0.8s all;
-  bottom: 30px;
+  transition: 1s all;
 }
 
 .js-para.show {
-  transition: 0.8s all;
+  transition: 1s all;
   opacity: 0.5;
-  bottom: 0;
 }
 
 .js-slideImg {
@@ -1047,7 +1058,8 @@ body {
 }
 
 .s-process {
-  background-color: #111111;
+  background-color: #000;
+  padding-top: 4rem;
 }
 
 .c-process-wrapper {
@@ -1070,7 +1082,7 @@ body {
 .c-process__para {
   padding-top: 10rem;
   transition: 0.4s all;
-  background-color: #000;
+  background-color: #111111;
   color: #fff;
   opacity: 0;
   visibility: hidden;
@@ -1091,9 +1103,8 @@ body {
 }
 
 .c-process__cont {
+  color: rgba(255, 255, 255, 0.75);
   font-family: B612, sans-serif;
-  color: #fff;
-  opacity: 0.75;
 }
 
 .c-process__link {
@@ -1101,7 +1112,7 @@ body {
   text-shadow: 2px 1px 2px #000;
   border-radius: 5px 5px 15px 15px;
   box-shadow: 0px 2px #ee1a92;
-  background: linear-gradient(to right, #111, transparent);
+  background: linear-gradient(to top, #000, transparent);
   color: #fff;
   font-size: 0.875rem;
   font-family: Merienda, cursive;
@@ -1111,6 +1122,7 @@ body {
   padding-bottom: 0.75rem;
   display: inline-block;
   margin-top: 1rem;
+  opacity: 0.75;
 }
 
 .c-process__link span {

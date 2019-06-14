@@ -5,6 +5,15 @@ import '../../../node_modules/jquery-viewport-checker/src/jquery.viewportchecker
 
 $(document).ready(function () {
 
+    // $('.l-main').scroll(function() {
+    //     // e.preventDefault();
+    //     $('.js-about-title').viewportChecker({
+    //         classToAdd: 'show',
+    //         offset: 100
+    //     });
+    //     console.log('Hello');
+    // });
+
     // var src = '../../assets/images/icon-2.png';
     // setTimeout(() => {
     //     $('.js-logo').attr('src', src);

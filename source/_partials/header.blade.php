@@ -18,6 +18,7 @@
                             <li class="c-lists__list {{ $page->selected('press') }}"><a href="{{ $page->baseUrl }}/press" class="c-lists__link">Pre Press</a></li>
                             <li class="c-lists__list {{ $page->selected('design') }}"><a href="{{ $page->baseUrl }}/design" class="c-lists__link">Design</a></li>
                             <li class="c-lists__list {{ $page->selected('packaging') }}"><a href="{{ $page->baseUrl }}/packaging" class="c-lists__link">Packaging</a></li>
+                            <li class="c-lists__list {{ $page->selected('offshore') }}"><a href="{{ $page->baseUrl }}/offshore" class="c-lists__link-spl">Offshore</a></li>
                         </ul>
                     </div>
                 </div>

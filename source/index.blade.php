@@ -64,8 +64,8 @@
                     </div>
                     <div class="col-md-8">
                         <div class="c-about">
-                            <h2 class="c-about__title">Portray Your Business Brand Effectively with Spectacular Graphics</h2>
-                            <p class="c-about__para">We are pioneering company married to creativeness, uniqueness, and crispness to cater the digital experience necessary for the success of any business. Modern day technology and dynamic graphic designs build strong brands with lasting identity. According to us enticing graphical design and an innovative outcome can only create solid foundation required for a noteworthy brand. We are a passionate team of artisans providing outstanding solutions that not only increases customer retention rate, but also increases customer recommendation rate too.</p>
+                            <h2 class="c-about__title js-about-title">Portray Your Business Brand Effectively with Spectacular Graphics</h2>
+                            <p class="c-about__para js-about">We are pioneering company married to creativeness, uniqueness, and crispness to cater the digital experience necessary for the success of any business. Modern day technology and dynamic graphic designs build strong brands with lasting identity. According to us enticing graphical design and an innovative outcome can only create solid foundation required for a noteworthy brand. We are a passionate team of artisans providing outstanding solutions that not only increases customer retention rate, but also increases customer recommendation rate too.</p>
                         </div>
                     </div>
                     <div class="col-md-12">

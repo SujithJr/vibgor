@@ -13033,6 +13033,14 @@ __webpack_require__.r(__webpack_exports__);
  // JS
 
 $(document).ready(function () {
+  // $('.l-main').scroll(function() {
+  //     // e.preventDefault();
+  //     $('.js-about-title').viewportChecker({
+  //         classToAdd: 'show',
+  //         offset: 100
+  //     });
+  //     console.log('Hello');
+  // });
   // var src = '../../assets/images/icon-2.png';
   // setTimeout(() => {
   //     $('.js-logo').attr('src', src);
