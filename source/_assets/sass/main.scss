@@ -344,7 +344,8 @@ body {
         @apply font-spl3 text-theme text-3xl mb-4;
     }
     &__para {
-        @apply text-white opacity-50 font-title leading-loose;
+        line-height: 2.5;
+        @apply text-white opacity-50 font-title;
     }
 }
 
@@ -456,19 +457,19 @@ body {
 // Printing Page
 .s-printing {
     // background-image: url('../../assets/images/print-banner-1.jpg');
-    // mb-16
-    @apply bg-black-d py-16 pb-24 relative;
-    &::after {
-        content: ' ';
-        height: 2rem;
-        background-image: linear-gradient(to left, rgba(0,0,0,1), #222);
-        @apply absolute left-0 bottom-0 w-full;
-    }
+    // mb-16 py-16
+    @apply bg-black-d pb-16 relative;
+    // &::after {
+    //     content: ' ';
+    //     height: 2rem;
+    //     background-image: linear-gradient(to left, rgba(0,0,0,1), #222);
+    //     @apply absolute left-0 bottom-0 w-full;
+    // }
     &:first-child {
         @apply pt-0;
     }
     &:last-child {
-        @apply pb-16;
+        @apply pb-24;
         &::after {
             content: none;
         }

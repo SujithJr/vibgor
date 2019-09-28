@@ -5,7 +5,7 @@
                 <img src="{{ $page->baseUrl }}/assets/images/email.jpg" alt="">
                 <div class="c-contact__content">
                     <a href="mailto:vibhgyar.graphix@gmail.com" class="c-contact__email inline-block"><span class="far fa-envelope"></span> vibhgyar.graphix@gmail.com</a>
-                    <a href="mailto:info.vibhgyargraphix@gmail.com" class="c-contact__email inline-block"><span class="far fa-envelope"></span> info.vibhgyargraphix@gmail.com</a>
+                    <a href="mailto:info@vibhgyargraphix.com" class="c-contact__email inline-block"><span class="far fa-envelope"></span> info@vibhgyargraphix.com</a>
                 </div>
             </div>
             <div class="c-contact__opt">

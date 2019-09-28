@@ -883,7 +883,7 @@ body {
 }
 
 .c-lists__link::after {
-  content: " ";
+  content: ' ';
   height: 3px;
   width: 0%;
   bottom: -10px;
@@ -925,7 +925,7 @@ body {
 }
 
 .s-banner::before, .s-banner::after {
-  content: "";
+  content: '';
   height: 100px;
   background-image: linear-gradient(black, transparent);
   position: absolute;
@@ -992,7 +992,7 @@ body {
 }
 
 .c-title-main::after {
-  content: " ";
+  content: ' ';
   height: 5px;
   width: 50px;
   bottom: -10px;
@@ -1131,7 +1131,7 @@ body {
 }
 
 .c-about-title--about::before {
-  content: " ";
+  content: ' ';
   border-radius: 0 40px 40px 0;
   background: rgba(0, 0, 0, 0.25);
   position: absolute;
@@ -1176,10 +1176,10 @@ body {
 }
 
 .c-about__para {
+  line-height: 2.5;
   color: #fff;
   opacity: 0.5;
   font-family: Merienda, cursive;
-  line-height: 2;
 }
 
 .c-line {
@@ -1329,20 +1329,8 @@ body {
 
 .s-printing {
   background-color: #111111;
-  padding-top: 4rem;
   padding-bottom: 4rem;
-  padding-bottom: 6rem;
   position: relative;
-}
-
-.s-printing::after {
-  content: " ";
-  height: 2rem;
-  background-image: linear-gradient(to left, black, #222);
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
 }
 
 .s-printing:first-child {
@@ -1350,7 +1338,7 @@ body {
 }
 
 .s-printing:last-child {
-  padding-bottom: 4rem;
+  padding-bottom: 6rem;
 }
 
 .s-printing:last-child::after {
@@ -1364,7 +1352,7 @@ body {
 }
 
 .c-banner-printing::before {
-  content: " ";
+  content: ' ';
   background: rgba(0, 0, 0, 0.5);
   position: absolute;
   top: 0;
@@ -1517,7 +1505,7 @@ body {
 }
 
 .c-contact a::after {
-  content: " ";
+  content: ' ';
   transition: 0.6s all;
   bottom: -5px;
   height: 2px;
@@ -1555,7 +1543,7 @@ body {
 }
 
 .c-contact__opt::before {
-  content: " ";
+  content: ' ';
   transition: 0.6s all;
   background: rgba(0, 0, 0, 0.3);
   position: absolute;
